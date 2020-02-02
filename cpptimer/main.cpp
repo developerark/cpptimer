@@ -27,9 +27,9 @@ void fileFunction(std::string arg){
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    Item a;
+    Item item;
     cpptimer timer1(std::bind(&Item::classFunction, "classFunction"), std::chrono::milliseconds(1000));
-    cpptimer timer2(std::bind(&Item::memberFunction, a, "memberFunction"), std::chrono::milliseconds(1000));
+    cpptimer timer2(std::bind(&Item::memberFunction, item, "memberFunction"), std::chrono::milliseconds(1000));
     cpptimer timer3(std::bind(fileFunction, "memberFunction"), std::chrono::milliseconds(1000));
     timer1.start();
     timer2.start();
